@@ -31,7 +31,7 @@ namespace RL.Backend.Commands.Handlers.Plans
                     .Include(p => p.UserProcedures)
                     .FirstOrDefault(p => p.PlanId == request.PlanId);
 
-                if (!(request.UserId == 0))
+                if (!(request.Operation == 0))
                 {                 
 
                     var User = _context.Users.FirstOrDefault(p => p.UserId == request.UserId);
